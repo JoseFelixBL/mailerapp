@@ -1,5 +1,5 @@
 from flask import (
-    Blueprint
+    Blueprint, render_template
 )
 
 bp = Blueprint('mail', __name__, url_prefix="/")
@@ -7,4 +7,4 @@ bp = Blueprint('mail', __name__, url_prefix="/")
 
 @bp.route('/', methods=['GET'])
 def index():
-    return 'chanchito super feliz'
+    return render_template('mails/index.html')
