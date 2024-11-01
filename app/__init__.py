@@ -1,10 +1,13 @@
 import os
+from dotenv import load_dotenv
 
 from flask import Flask
 
 
 def create_app():
     app = Flask(__name__)
+
+    load_dotenv()
 
     app.config.from_mapping(
         SENDGRID_KEY=os.environ.get('SENDGRID_API_KEY'),

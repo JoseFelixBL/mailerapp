@@ -10,7 +10,7 @@ from .schema import instructions
 
 
 def get_db():
-    if db not in g:
+    if 'db' not in g:
         g.db = mariadb.connect(
             host=current_app.config['DATABASE_HOST'],
             user=current_app.config['DATABASE_USER'],
