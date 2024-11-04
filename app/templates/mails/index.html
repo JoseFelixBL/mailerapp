@@ -4,6 +4,11 @@
     <h1>{% block title %}Correos enviados{% endblock title %}</h1>
 {% endblock header %}
 
+
+{% block actions %}
+    <a class="button" href='#'>Nuevo correo</a>
+{% endblock actions %}
+
 {% block content %}
 <ul>
     {% for mail in mails %}
