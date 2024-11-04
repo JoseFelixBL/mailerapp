@@ -10,6 +10,7 @@ def create_app():
     load_dotenv()
 
     app.config.from_mapping(
+        FROM_EMAIL=os.environ.get('FROM_EMAIL'),
         SENDGRID_KEY=os.environ.get('SENDGRID_API_KEY'),
         SECRET_KEY=os.environ.get('SECRET_KEY'),
         DATABASE_HOST=os.environ.get('FLASK_DATABASE_HOST'),
