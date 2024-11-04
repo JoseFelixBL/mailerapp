@@ -15,3 +15,12 @@ def index():
 
     # print(mails)  # Para comprobar que estoy trayéndolo bien
     return render_template('mails/index.html', mails=mails)
+
+
+@bp.route('/create', methods=['GET', 'POST'])
+def create():
+    return render_template('mails/create.html')
+    if x == 'POST':
+        pass
+
+    return render_template('mails/create.html')
